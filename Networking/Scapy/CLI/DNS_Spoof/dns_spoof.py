@@ -3,7 +3,7 @@ from threading import Thread
 from time import sleep
 from os import system
 import  subprocess
-##################################
+###########################################
 #DNS flush
 system("ipcnfig /flushdns")
 system("cls")
@@ -11,7 +11,7 @@ system("cls")
 #Emty list 
 l=[]
 dic={}
-###############################
+###########################################
 #count the list 
 def count_list(list_):
     for i in list_:
@@ -22,7 +22,7 @@ def count_list(list_):
                 if count>1:
                     dic[i]=count
     print(dic)
-#################################
+###########################################
 #Printing in sniff 
 def print_(packet):
     if packet.haslayer(scapy.DNS):
@@ -33,7 +33,7 @@ def print_(packet):
             except:
                 pass 
             l.append(name)
-###################################
+###########################################
 #Printing
 def thread_printing():
     while True:
